@@ -20,7 +20,7 @@ form.addEventListener('submit' , (e) => {
     }
     else
     {
-        results.innerHTML = `<span>Ans :- ${h+w}</span>`
+        results.innerHTML = `<span>Ans :- ${(weight / ((height * height) / 10000)).toFixed(2)}</span>`
     }
     
 
