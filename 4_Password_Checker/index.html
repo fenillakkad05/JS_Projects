@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Checker</title>
+</head>
+<body>
+    <div class="container">
+        <div class="input-box" style="text-align: center;">
+            <input type="password"  id="password" placeholder="Password">
+            <button id="submit" >Check</button><br><br>
+            <p id="message"></p>
+        </div>
+        
+    </div>
+</body>
+
+<script>
+    let pass=document.getElementById('password')
+    let submit =document.getElementById('submit')
+    let mess = document.getElementById('message')
+
+    submit.addEventListener('click' , ()=>{
+        if(pass.value.length <= 4)
+        {
+            mess.innerHTML='Password is weak';
+        }
+        else if(pass.value.length <= 8)
+        {
+            mess.innerHTML='Password is medium';
+        }
+        else
+        {
+            mess.innerHTML='Password is strong';
+        }
+    })
+</script>
+</html>
